@@ -13,9 +13,12 @@ J = 0;
 % Instructions: Compute the cost of a particular choice of theta
 %               You should set J to the cost.
 
+% NOTE  X and y are matrices whose rows represent the examples from the training set
 
+predictions = X * theta;
+sqrdErrors = (predictions - y).^2;
 
-
+J = 1/(2*m) * sum(sqrdErrors);
 
 % =========================================================================
 
